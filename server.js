@@ -11,7 +11,7 @@ const database = {
             id: '123',
             name: 'Alex',
             email: 'alexandre@gmail.com',
-            password: 'necromancer',
+            password: '123456',
             entries: 0, //this means how many times John has submitted photos for clarifai
             joined: new Date()
         },
