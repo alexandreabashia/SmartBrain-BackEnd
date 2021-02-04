@@ -10,8 +10,8 @@ const database = {
         {
             id: '123',
             name: 'Alex',
-            email: 'alexandre@gmail.com',
-            password: '123456',
+            email: 'a',
+            password: 'a',
             entries: 0, //this means how many times John has submitted photos for clarifai
             joined: new Date()
         },
@@ -84,7 +84,7 @@ app.get('/profile/:id', (req, res) => {
 })
 
 //increase entries
-app.post('/image/', (req, res) => {
+app.put('/image/', (req, res) => {
     const { id } = req.body;
     let found = false;
     database.users.forEach(user => {
