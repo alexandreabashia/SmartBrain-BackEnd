@@ -2,6 +2,11 @@
 
 const handleRegister = (req, res, knex, bcrypt) => {
     const { email, name, password } = req.body; //destructuring from client
+
+    if (!email || !name || !password) {
+        return res.status(400).send('please fully fill register form');
+    }
+
     const hash = bcrypt.hashSync(password);
     knex.transaction(trx => {
         trx.insert({
