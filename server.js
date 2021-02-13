@@ -28,9 +28,7 @@ app.use(cors());
 
 //homepage
 app.get('/', (req, res) => { 
-    knex.select('*').from('users')
-    .then(data => { res.send(data)
-     })
+    res.send("it's working!");
 })
 
 
